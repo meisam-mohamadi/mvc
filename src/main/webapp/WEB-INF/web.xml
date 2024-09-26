@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    
+    <servlet>
+        <servlet-name>users_servlet</servlet-name>
+        <servlet-class>ir.meisammohamadi.first_mvc_project.controller.UsersController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>users_servlet</servlet-name>
+        <url-pattern>/signup</url-pattern>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+
+    <filter>
+        <filter-name>f1</filter-name>
+        <filter-class>ir.meisammohamadi.first_mvc_project.filters.MyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f1</filter-name>
+        <url-pattern>/panel.jsp</url-pattern>
+        <url-pattern>/welcome.jsp</url-pattern>
+    </filter-mapping>
+</web-app>
